@@ -19,6 +19,7 @@ xUnit do not belong here.
   it before, so this is a good chance to work with the newest version.
 - **Cost:** opening the solution needs VS 2022 17.10 or newer, or VS
   2026. Not an issue here.
+- **Reference:** [.NET support policy](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
 
 ### Two projects only (`StockAllocation.Domain`, `StockAllocation.Domain.Tests`)
 - **Decision:** no `Application`, `Infrastructure`, or `Contracts` project.
@@ -53,6 +54,7 @@ xUnit do not belong here.
 - **Cost:** experimenting is slower. Half-written code with a warning
   will not build. Third-party warnings I cannot fix need an explicit
   suppression in code.
+- **Reference:** [Customize your build (Directory.Build.props)](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build), [Nullable reference types](https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references)
 
 ### Solution file is `.slnx`, not `.sln`
 - **Decision:** kept the default `.slnx` emitted by `dotnet new sln` on
@@ -70,5 +72,6 @@ xUnit do not belong here.
   did not pick, like a `Properties/` folder and `AssemblyInfo.cs`. "The
   wizard added it" is not a good answer in a review.
 - **Cost:** slightly more typing on Day 1. Nothing else.
+- **Reference:** [`dotnet new` command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 
 ---
